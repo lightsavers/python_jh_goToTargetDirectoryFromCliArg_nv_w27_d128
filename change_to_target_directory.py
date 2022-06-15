@@ -1,10 +1,10 @@
-#***********************************
-#*
-#* Document: change directory to target directory (must be static)
-#* Author: lightsavers
-#* Last update: 05/25/2022
-#*
-#***********************************
+'''***********************************
+*
+* Document: change directory to target directory (must be static)
+* Author: lightsavers
+* Last update: 05/25/2022
+*
+***********************************'''
 
 # take and print past and new directory
 def changeDirectory(newDirectory):    
