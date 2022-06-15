@@ -8,6 +8,7 @@
 
 # take and print past and new directory
 def changeDirectory(newDirectory):    
+    
     #print current directory
     currentDir = os.getcwd()
     print("Current directory: \n" , currentDir)
