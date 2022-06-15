@@ -10,7 +10,6 @@ import sys
 import os
 from pathlib import Path
 
-
 # take and print past and new directory
 class directoryFileOperation(object):
     def changeDirectory(self, newDirectory):    
