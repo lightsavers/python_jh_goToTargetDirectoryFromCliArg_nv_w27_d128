@@ -1,35 +1,38 @@
 '''***********************************
 *
-* Document: change directory to target directory (must be static)
+* Document: change directory to target directory within script
 * Author: lightsavers
 * Last update: 05/25/2022
 *
 ***********************************'''
+#relevant imports
+import sys
+import os
+from pathlib import Path
+
 
 # take and print past and new directory
-def changeDirectory(newDirectory):    
+class directoryFileOperation(object):
+    def changeDirectory(self, newDirectory):    
+        
+        #print current directory
+        currentDir = os.getcwd()
+        print("Current directory: \n" , currentDir)
     
-    #print current directory
-    currentDir = os.getcwd()
-    print("Current directory: \n" , currentDir)
-   
-    #change to specific directory (directory must be static
-    path = Path(newDirectory)
-    os.chdir(path)
-    
-    #print new directory
-    newDir = os.getcwd()
-    print("new directory: \n" , newDir)
-    
-    print()
+        #change to specific directory (directory must be static
+        path = Path(newDirectory)
+        os.chdir(path)
+        
+        #print new directory
+        self.newDir = os.getcwd()
+        print("new directory: \n" , self.newDir)
+        
+        print()
 
 
 #print to console the current directory
 if __name__ == "__main__":
-    #relevant imports
-    import sys
-    import os
-    from pathlib import Path
-    changeDirectory(str(sys.argv[1]))
+    fsoper = directoryFileOperation()
+    fsoper.changeDirectory(str(sys.argv[1]))
 
     
